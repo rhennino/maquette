@@ -11,6 +11,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialExampleModule } from '../material.module';
 import { FormsModule } from '@angular/forms';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialExampleModule,
-    FormsModule
+    FormsModule, 
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

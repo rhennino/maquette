@@ -1,7 +1,9 @@
 <button mat-button color="warn" class="entete">Bienvenue {{professeur}}</button><br>
 Choisir le questionnaire :  
-<mat-selection-list [multiple]="false">
+<div fxLayout="column" fxLayoutAlign="space-around center" >
+<mat-selection-list [multiple]="false" >
     <!-- <div class="example-button-row"> -->
-        <mat-list-option *ngFor="let questionnaire of questionnaires" [routerLink]="['/questionnaire',questionnaire]">{{questionnaire}}</mat-list-option>
+        <mat-list-option  *ngFor="let questionnaire of questionnaires" [routerLink]="['/questionnaire',questionnaire]"><div>{{questionnaire}}</div></mat-list-option>
     <!-- </div> -->
 </mat-selection-list>
+</div>

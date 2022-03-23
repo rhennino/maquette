@@ -19,9 +19,14 @@ export class QuestionnaireComponent implements OnInit {
   mercredi = false;
   jeudi = false;
   vendredi = false;
-  labelPosition: 'before' | 'after' = 'after';
+  labelPosition1: 'before' | 'after' = 'after';
   disabled = false;
-
+  hier = false;
+  aujourdhui = false;
+  demain = false;
+  jamais = false;
+  plustard = false
+  labelPosition2: 'hier' | 'aujourdhui' = 'hier';
 
   constructor(private route: ActivatedRoute) { 
     this.ii_eleve = 0
