@@ -1,0 +1,7 @@
+<button mat-button color="warn" class="entete">Bienvenue {{professeur}}</button><br>
+Choisir le questionnaire :  
+<mat-selection-list [multiple]="false">
+    <!-- <div class="example-button-row"> -->
+        <mat-list-option *ngFor="let questionnaire of questionnaires" [routerLink]="['/questionnaire',questionnaire]">{{questionnaire}}</mat-list-option>
+    <!-- </div> -->
+</mat-selection-list>
