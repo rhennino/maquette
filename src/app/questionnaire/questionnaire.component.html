@@ -12,37 +12,41 @@
         <div>{{question.intitule}}</div>
 
         <div *ngIf="question.format==='reponselibre'">
+            <section class="example-section">
             <mat-form-field>
                 <mat-label>Réponse libre</mat-label>
                 <input matInput>
             </mat-form-field>
+            </section>
         </div>
 
         <div *ngIf="question.format==='reponsesimposees'">
+            <section class="example-section">
             <mat-radio-group [(ngModel)]="labelPosition2">
-                <mat-radio-button class="example-margin" [(ngModel)]="hier">hier</mat-radio-button>
-                <mat-radio-button class="example-margin" [(ngModel)]="aujourdhui">aujourd'hui</mat-radio-button>
-                <mat-radio-button class="example-margin" [(ngModel)]="demain">demain</mat-radio-button>
-                <mat-radio-button class="example-margin" [(ngModel)]="plustard">plus tard</mat-radio-button>
-                <mat-radio-button class="example-margin" [(ngModel)]="jamais">jamais</mat-radio-button>
+                <mat-radio-button value="hier">hier</mat-radio-button>
+                <mat-radio-button value="aujourdhui">aujourd'hui</mat-radio-button>
+                <mat-radio-button value="demain">demain</mat-radio-button>
+                <mat-radio-button value="plustard">plus tard</mat-radio-button>
+                <mat-radio-button value="jamais">jamais</mat-radio-button>
             </mat-radio-group>
+        </section>
         </div>
 
         <div *ngIf="question.format ==='choixmultiples'">
             <section class="example-section">
-                <mat-checkbox class="example-margin" [(ngModel)]="lundi">Lundi</mat-checkbox>
-                <mat-checkbox class="example-margin" [(ngModel)]="mardi">Mardi</mat-checkbox>
-                <mat-checkbox class="example-margin" [(ngModel)]="mercredi">Mercredi</mat-checkbox>
-                <mat-checkbox class="example-margin" [(ngModel)]="jeudi">Jeudi</mat-checkbox>
-                <mat-checkbox class="example-margin" [(ngModel)]="vendredi">Vendredi</mat-checkbox>
+                <mat-checkbox [(ngModel)]="lundi">Lundi</mat-checkbox>
+                <mat-checkbox [(ngModel)]="mardi">Mardi</mat-checkbox>
+                <mat-checkbox [(ngModel)]="mercredi">Mercredi</mat-checkbox>
+                <mat-checkbox [(ngModel)]="jeudi">Jeudi</mat-checkbox>
+                <mat-checkbox [(ngModel)]="vendredi">Vendredi</mat-checkbox>
             </section>
         </div>
 
         <div *ngIf="question.format ==='vraifaux'">
             <section class="example-section">
                 <mat-radio-group [(ngModel)]="labelPosition1">
-                    <mat-radio-button class="example-margin" value="after">Oui</mat-radio-button>
-                    <mat-radio-button class="example-margin" value="before">Non</mat-radio-button>
+                    <mat-radio-button value="after">Oui</mat-radio-button>
+                    <mat-radio-button value="before">Non</mat-radio-button>
                 </mat-radio-group>
             </section>
         </div>

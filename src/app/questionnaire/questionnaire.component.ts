@@ -26,7 +26,7 @@ export class QuestionnaireComponent implements OnInit {
   demain = false;
   jamais = false;
   plustard = false
-  labelPosition2: 'hier' | 'aujourdhui' = 'hier';
+  labelPosition2: 'hier' | 'aujourdhui' | "demain" | "jamais" | "plustard" = 'hier';
 
   constructor(private route: ActivatedRoute) { 
     this.ii_eleve = 0
