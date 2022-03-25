@@ -1,7 +1,12 @@
-<button mat-button color="warn" class="entete">Bienvenue {{professeur}}</button><br>
-Choisir le questionnaire :  
-<mat-selection-list [multiple]="false">
-    <!-- <div class="example-button-row"> -->
-        <mat-list-option *ngFor="let questionnaire of questionnaires" [routerLink]="['/questionnaire',questionnaire]">{{questionnaire}}</mat-list-option>
-    <!-- </div> -->
-</mat-selection-list>
+<div class="container">
+    <!-- header : a gauche nom prénom ou bouton connexion ; a droite bouton logout -->
+    <div class="entete">
+        <div>{{professeur}}</div>
+        <div>logout</div>
+    </div>
+    <!-- Liste des questionnaires disponibles pour le professeur connecté -->
+    <div class="body">
+        <div *ngFor="let questionnaire of questionnaires" [routerLink]="['/questionnaire',questionnaire]">
+            {{questionnaire}}</div>
+    </div>
+</div>

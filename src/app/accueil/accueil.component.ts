@@ -9,11 +9,13 @@ import { environment } from 'src/environments/environment';
 export class AccueilComponent implements OnInit {
   questionnaires: string[] = environment.questionnaires
   professeur: string = environment.professeur
-  constructor() { 
-    // console.log(this.questionnaires)
+
+  constructor() {
+
   }
 
-  ngOnInit(): void { 
+
+  ngOnInit(): void {
 
   }
 
