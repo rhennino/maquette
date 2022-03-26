@@ -10,13 +10,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialExampleModule } from '../material.module';
 import { FormsModule } from '@angular/forms';
+import { AdministrationComponent } from './administration/administration.component';
+import { QuestionnaireCreationComponent } from './questionnaire-creation/questionnaire-creation.component';
+import { QuestionCreationComponent } from './question-creation/question-creation.component';
+import { QuestionnaireAffichageComponent } from './questionnaire-affichage/questionnaire-affichage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccueilComponent,
     QuestionnaireComponent,
-    QuestionComponent
+    QuestionComponent,
+    AdministrationComponent,
+    QuestionnaireCreationComponent,
+    QuestionCreationComponent,
+    QuestionnaireAffichageComponent
   ],
   imports: [
     BrowserModule,

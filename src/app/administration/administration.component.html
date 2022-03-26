@@ -1,0 +1,61 @@
+<div class="container">
+    <!-- header : a gauche nom prénom ou bouton connexion ; a droite bouton logout -->
+    <div class="entete">
+        <div [routerLink]="['/accueil']"><i class="fa fa-arrow-left"></i></div>
+        <div *ngIf="!VC.connecte" (click)="VC.login()">Connexion</div>
+        <div *ngIf="VC.connecte">Nom du professeur</div>
+        <div *ngIf="VC.connecte" (click)="VC.logout()">logout<i class="fa fa-sign-out"></i></div>
+    </div>
+
+    <div *ngIf="VC.connecte && VC.admin">
+        <div class="item">
+            <div class="itemquestionnaire">Ajouter un professeur</div>
+            <div class="itemquestionnaire">Prénom : <input type="text" id="prenom_professeur" name="prenom_professeur"
+                    required maxlength="50" size="20"></div>
+            <div class="itemquestionnaire">Nom : <input type="text" id="nom_professeur" name="nom_professeur" required
+                    maxlength="50" size="20"></div>
+            <div class="itemquestionnaire">Connecteur CAS : <input type="text" id="id_professeur" name="id_professeur"
+                    required maxlength="50" size="20"></div>
+            <div class="itemquestionnaire">Lien Professeur-Groupe : <input type="text" [(ngModel)]="lienPG" name="lienPG"
+                    required maxlength="50" size="20"><button onclick="getValue();">Ajouter</button></div>
+            <div class="itemquestionnaire">Lien PP-Groupe : <input type="text" id="lienPP" name="lienPP" required
+                    maxlength="50" size="20"></div>
+            <input type="submit" value="Envoyer">
+        </div>
+        <div class="item">
+            <div class="itemquestionnaire">Ajouter une classe/un groupe</div>
+            <div class="itemquestionnaire">Nom : <input type="text" id="id_groupe" name="id_groupe" required
+                    maxlength="50" size="20"></div>
+            <div class="itemquestionnaire">Niveau : <input type="text" id="niveau_groupe" name="niveau_groupe" required
+                    maxlength="50" size="20"></div>
+            <div class="itemquestionnaire">Classe : <input type="text" id="classe_groupe" name="classe_groupe" required
+                    maxlength="50" size="20"></div>
+            <div class="itemquestionnaire">Lien Professeur-Groupe : <input type="text" id="lienPG" name="lienPG"
+                    required maxlength="50" size="20"></div>
+            <div class="itemquestionnaire">Lien Questionnaire-Groupe : <input type="text" id="lienQG" name="lienQG"
+                    required maxlength="50" size="20"></div>
+            <div class="itemquestionnaire">Lien PP-Groupe : <input type="text" id="lienPP" name="lienPP" required
+                    maxlength="50" size="20"></div>
+            <div class="itemquestionnaire">Lien Eleve-Groupe : <input type="text" id="lienEG" name="lienEG" required
+                    maxlength="50" size="20"></div>
+            <input type="submit" value="Envoyer">
+        </div>
+        <div class="item">
+            <div class="itemquestionnaire">Ajouter un eleve</div>
+            <div class="itemquestionnaire">id : <input type="text" id="id_eleve" name="id_eleve" required maxlength="50"
+                    size="20"></div>
+            <div class="itemquestionnaire">Prénom : <input type="text" id="prenom_eleve" name="prenom_eleve" required
+                    maxlength="50" size="20"></div>
+            <div class="itemquestionnaire">Nom : <input type="text" id="nom_eleve" name="nom_eleve" required
+                    maxlength="50" size="20"></div>
+            <div class="itemquestionnaire">Date de naissance : <input type="text" id="naissance_eleve"
+                    name="naissance_eleve" required maxlength="50" size="20"></div>
+            <div class="itemquestionnaire">Lien Eleve-Groupe : <input type="text" id="classe_eleve" name="classe_eleve"
+                    required maxlength="50" size="20"></div>
+            <div class="itemquestionnaire">Lien Eleve-Question : <input type="text" id="question_eleve"
+                    name="question_eleve" required maxlength="50" size="20"></div>
+            <input type="submit" value="Envoyer">
+        </div>
+    </div>
+
+</div>

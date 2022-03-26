@@ -2,10 +2,10 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-
 export const environment = {
   production: false,
-  professeur: "Hennino Renaud",
+  connecte: false, 
+  professeur: {id: "VBV09652",nomprenom: "Renaud Hennino", adm: true}, 
   questionnaires: ["questionnaire1", "questionnaire2", "questionnaire3"],
   questionnaire1: [
     {intitule: "que pensez vous de cet élève",format: "reponselibre"}, 

@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class QuestionnaireComponent implements OnInit {
   questionnaire: any;
-  professeur: string = environment.professeur
+  // professeur: string = environment.professeur
   questions: any;
   eleves: any = environment.eleves
   ii_eleve: any;

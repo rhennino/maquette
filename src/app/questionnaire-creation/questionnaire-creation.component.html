@@ -1,0 +1,65 @@
+<div class="container">
+    <!-- header : a gauche nom prénom ou bouton connexion ; a droite bouton logout -->
+    <div class="entete">
+        <div [routerLink]="['/accueil']"><i class="fa fa-arrow-left"></i></div>
+        <div *ngIf="!VC.connecte" (click)="VC.login()">Connexion</div>
+        <div *ngIf="VC.connecte">Nom du professeur</div>
+        <div *ngIf="VC.connecte" (click)="VC.logout()">logout<i class="fa fa-sign-out"></i></div>
+    </div>
+
+    <div *ngIf="VC.connecte && VC.admin">
+        <div class="item">
+            <div class="itemquestionnaire">Ajouter un questionnaire</div>
+            <div class="itemquestionnaire">Intitulé : <input type="text" id="id_questionnaire" name="id_questionnaire"
+                    required maxlength="50" size="20"></div>
+            <div class="itemquestionnaire">Type : <input type="text" id="id_questionnaire" name="id_questionnaire" required
+                    maxlength="50" size="20"></div>
+            <div class="itemquestionnaire">Visible : <input type="text" id="id_questionnaire" name="id_questionnaire"
+                    required maxlength="50" size="20"></div>
+            <div class="itemquestionnaire">En cours : <input type="text" id="lienPG"
+                    name="lienPG" required maxlength="50" size="20"></div>
+            <div class="itemquestionnaire">Id Créateur : Nom du professeur connecté ou <input type="text" id="id_professeur" name="id_professeur" required
+                    maxlength="50" size="20"></div>
+            <input type="submit" value="Envoyer" >
+        </div>
+
+
+        <div class="item">
+            <div class="itemquestionnaire">Groupes concernés</div>
+            <div class="itemquestionnaire">Id groupe : <input type="text" id="id_questionnaire" name="id_questionnaire"
+                    required maxlength="50" size="20"><button>Ajouter</button></div>
+            <input type="submit" value="Envoyer" >
+        </div>
+
+        <div class="item">
+            <div class="itemquestionnaire">Eleves concernés</div>
+            <div class="itemquestionnaire">Id eleve : <input type="text" id="id_questionnaire" name="id_questionnaire"
+                    required maxlength="50" size="20"><button>Ajouter</button></div>
+            <input type="submit" value="Envoyer" >
+        </div>
+
+
+
+        <div class="item" *ngFor="let question of Questions">
+            <div class="itemquestionnaire">Question {{question}}</div>
+            <div class="itemquestionnaire">Intitulé : <input type="text" id="id_questionnaire" name="id_questionnaire"
+                    required maxlength="50" size="20"></div>
+            <div class="itemquestionnaire">Choix : <input type="text" id="id_questionnaire" name="id_questionnaire" required
+                    maxlength="50" size="20"></div>
+            <div class="itemquestionnaire">Ordre : <input type="text" id="id_questionnaire" name="id_questionnaire"
+                    required maxlength="50" size="20"></div>
+                    <div class="itemquestionnaire">Lien Eleve : <input type="text" id="id_questionnaire" name="id_questionnaire"
+                        required maxlength="50" size="20"></div>    
+            <input type="submit" value="Envoyer" >
+            <button>Supprimer</button>
+        </div>
+
+        <div class="item">
+            <div class="itemquestionnaire"><button (click)="ajoutQuestion()">Ajouter une question</button></div>
+        </div>
+
+    </div>
+
+
+
+</div>

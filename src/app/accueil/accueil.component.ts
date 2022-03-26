@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { VariablesCommunesService } from '../variables-communes.service';
 
 @Component({
   selector: 'app-accueil',
@@ -7,16 +7,12 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./accueil.component.scss']
 })
 export class AccueilComponent implements OnInit {
-  questionnaires: string[] = environment.questionnaires
-  professeur: string = environment.professeur
 
-  constructor() {
 
+  constructor(public VC: VariablesCommunesService) {
   }
 
-
   ngOnInit(): void {
-
   }
 
 }

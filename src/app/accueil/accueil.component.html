@@ -1,12 +1,41 @@
 <div class="container">
     <!-- header : a gauche nom prénom ou bouton connexion ; a droite bouton logout -->
     <div class="entete">
-        <div>{{professeur}}</div>
-        <div>logout</div>
+        <div *ngIf="!VC.connecte" (click)="VC.login()"><button>Connexion</button></div>
+        <div *ngIf="VC.connecte" >Nom du professeur</div>
+        <div *ngIf="VC.connecte" (click)="VC.logout()">logout<i class="fa fa-sign-out"></i></div>
     </div>
+    
+    <div *ngIf="VC.admin" class="entete">
+        <div *ngIf="VC.connecte" [routerLink]="['/questionnairecreation']"><button>Créer/Editer un questionnaire</button></div>
+        <div *ngIf="VC.connecte" [routerLink]="['/administration']"><button>Admin</button></div>
+    </div>
+    
     <!-- Liste des questionnaires disponibles pour le professeur connecté -->
-    <div class="body">
-        <div *ngFor="let questionnaire of questionnaires" [routerLink]="['/questionnaire',questionnaire]">
-            {{questionnaire}}</div>
+    <div *ngIf="VC.connecte">
+        <div class="item" [routerLink]="['/questionnaireaffichage']">
+            <div class="itemquestionnaire">Nom du questionnaire</div>
+            <div class="itemquestionnaire">Nom du créateur</div>
+            <div class="itemquestionnaire">Statut (visible ?, en cours ?)</div>
+        </div>
+
+        <div class="item" [routerLink]="['//questionnaireaffichage']">
+            <div class="itemquestionnaire">Nom du questionnaire</div>
+            <div class="itemquestionnaire">Nom du créateur</div>
+            <div class="itemquestionnaire">Statut (visible ?, en cours ?)</div>
+        </div>
+
+        <div class="item" [routerLink]="['//questionnaireaffichage']">
+            <div class="itemquestionnaire">Nom du questionnaire</div>
+            <div class="itemquestionnaire">Nom du créateur</div>
+            <div class="itemquestionnaire">Statut (visible ?, en cours ?)</div>
+        </div>
+
+        <div class="item" [routerLink]="['//questionnaireaffichage']">
+            <div class="itemquestionnaire">Nom du questionnaire</div>
+            <div class="itemquestionnaire">Nom du créateur</div>
+            <div class="itemquestionnaire">Statut (visible ?, en cours ?)</div>
+        </div>
     </div>
+
 </div>
