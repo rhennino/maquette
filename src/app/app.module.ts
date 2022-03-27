@@ -14,6 +14,7 @@ import { AdministrationComponent } from './administration/administration.compone
 import { QuestionnaireCreationComponent } from './questionnaire-creation/questionnaire-creation.component';
 import { QuestionCreationComponent } from './question-creation/question-creation.component';
 import { QuestionnaireAffichageComponent } from './questionnaire-affichage/questionnaire-affichage.component';
+import { QuestionnaireSyntheseComponent } from './questionnaire-synthese/questionnaire-synthese.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { QuestionnaireAffichageComponent } from './questionnaire-affichage/quest
     AdministrationComponent,
     QuestionnaireCreationComponent,
     QuestionCreationComponent,
-    QuestionnaireAffichageComponent
+    QuestionnaireAffichageComponent,
+    QuestionnaireSyntheseComponent
   ],
   imports: [
     BrowserModule,

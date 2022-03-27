@@ -1,1 +1,186 @@
-<p>questionnaire-affichage works!</p>
+<div class="container">
+
+    <div class="entete">
+        <div *ngIf="!VC.connecte" (click)="VC.login()"><button>Connexion</button></div>
+        <div *ngIf="VC.connecte">Nom du professeur</div>
+        <div *ngIf="VC.connecte" (click)="VC.logout()">logout<i class="fa fa-sign-out"></i></div>
+    </div>
+
+    <div *ngIf="VC.admin" class="entete">
+        <div *ngIf="VC.connecte" [routerLink]="['/questionnairesynthese']"><button>Voir la synthèse partielle</button>
+        </div>
+        <div *ngIf="VC.connecte" [routerLink]="['/administration']"><button>Admin</button></div>
+    </div>
+
+    <div *ngIf="VC.connecte">
+        <div class="item_eleve">
+            <div class="item_question">
+                <div>Eleve 1 </div>
+                <div>Classe de 2GTA</div>
+                <div>
+                    <label for="motivation">Motivation de l'élève</label>
+                    <textarea id="motivation" name="motivation" rows="5" cols="33"></textarea>
+                </div>
+
+                <div>
+                    <label for="accessit">Proposition d'accessit ou de mise en garde : </label>
+                    <select name="pets" id="accessit">
+                        <option value=""></option>
+                        <option value="fel">Félicitations</option>
+                        <option value="com">Compliments</option>
+                        <option value="enc">Encouragements</option>
+                        <option value="mgt">Mise en garde travail</option>
+                        <option value="mgc">Mise en garde comportement</option>
+                    </select>
+                </div>
+                <div class="proposition">
+                    <div><label>Avis de mi-semestre sur les demande de l'élève : </label></div>
+                    <div>
+                        1STMG
+                        <input type="radio" id="favorable" name="proposition1" value="favorable">
+                        <label for="favorable">Favorable</label>
+                        <input type="radio" id="reserve" name="proposition1" value="reserve">
+                        <label for="reserve">Réservé</label>
+                        <input type="radio" id="defavorable" name="proposition1" value="defavorable">
+                        <label for="defavorable">Défavorable</label>
+                    </div>
+                    <div>
+                        1générale
+                        <input type="radio" id="favorable" name="proposition2" value="favorable">
+                        <label for="favorable">Favorable</label>
+                        <input type="radio" id="reserve" name="proposition2" value="reserve">
+                        <label for="reserve">Réservé</label>
+                        <input type="radio" id="defavorable" name="proposition2" value="defavorable">
+                        <label for="defavorable">Défavorable</label>
+                    </div>
+                </div>
+            </div>
+            <div class="item_question">
+                <div>Eleve 2 </div>
+                <div>Classe de 2GTA</div>
+                <div>
+                    <label for="motivation">Motivation de l'élève</label>
+                    <textarea id="motivation" name="motivation" rows="5" cols="33"></textarea>
+                </div>
+
+                <div>
+                    <label for="accessit">Proposition d'accessit ou de mise en garde : </label>
+                    <select name="pets" id="accessit">
+                        <option value=""></option>
+                        <option value="fel">Félicitations</option>
+                        <option value="com">Compliments</option>
+                        <option value="enc">Encouragements</option>
+                        <option value="mgt">Mise en garde travail</option>
+                        <option value="mgc">Mise en garde comportement</option>
+                    </select>
+                </div>
+                <div class="proposition">
+                    <div><label>Avis de mi-semestre sur les demande de l'élève : </label></div>
+                    <div>
+                        1STMG
+                        <input type="radio" id="favorable" name="proposition1" value="favorable">
+                        <label for="favorable">Favorable</label>
+                        <input type="radio" id="reserve" name="proposition1" value="reserve">
+                        <label for="reserve">Réservé</label>
+                        <input type="radio" id="defavorable" name="proposition1" value="defavorable">
+                        <label for="defavorable">Défavorable</label>
+                    </div>
+                    <div>
+                        1générale
+                        <input type="radio" id="favorable" name="proposition2" value="favorable">
+                        <label for="favorable">Favorable</label>
+                        <input type="radio" id="reserve" name="proposition2" value="reserve">
+                        <label for="reserve">Réservé</label>
+                        <input type="radio" id="defavorable" name="proposition2" value="defavorable">
+                        <label for="defavorable">Défavorable</label>
+                    </div>
+                </div>
+            </div>
+            <div class="item_question">
+                <div>Eleve 1 </div>
+                <div>Classe de 2GTB</div>
+                <div>
+                    <label for="motivation">Motivation de l'élève</label>
+                    <textarea id="motivation" name="motivation" rows="5" cols="33"></textarea>
+                </div>
+
+                <div>
+                    <label for="accessit">Proposition d'accessit ou de mise en garde : </label>
+                    <select name="pets" id="accessit">
+                        <option value=""></option>
+                        <option value="fel">Félicitations</option>
+                        <option value="com">Compliments</option>
+                        <option value="enc">Encouragements</option>
+                        <option value="mgt">Mise en garde travail</option>
+                        <option value="mgc">Mise en garde comportement</option>
+                    </select>
+                </div>
+                <div class="proposition">
+                    <div><label>Avis de mi-semestre sur les demande de l'élève : </label></div>
+                    <div>
+                        1STMG
+                        <input type="radio" id="favorable" name="proposition1" value="favorable">
+                        <label for="favorable">Favorable</label>
+                        <input type="radio" id="reserve" name="proposition1" value="reserve">
+                        <label for="reserve">Réservé</label>
+                        <input type="radio" id="defavorable" name="proposition1" value="defavorable">
+                        <label for="defavorable">Défavorable</label>
+                    </div>
+                    <div>
+                        1générale
+                        <input type="radio" id="favorable" name="proposition2" value="favorable">
+                        <label for="favorable">Favorable</label>
+                        <input type="radio" id="reserve" name="proposition2" value="reserve">
+                        <label for="reserve">Réservé</label>
+                        <input type="radio" id="defavorable" name="proposition2" value="defavorable">
+                        <label for="defavorable">Défavorable</label>
+                    </div>
+                </div>
+            </div>
+            <div class="item_question">
+                <div>Eleve 2 </div>
+                <div>Classe de 2GTB</div>
+                <div>
+                    <label for="motivation">Motivation de l'élève</label>
+                    <textarea id="motivation" name="motivation" rows="5" cols="33"></textarea>
+                </div>
+
+                <div>
+                    <label for="accessit">Proposition d'accessit ou de mise en garde : </label>
+                    <select name="pets" id="accessit">
+                        <option value=""></option>
+                        <option value="fel">Félicitations</option>
+                        <option value="com">Compliments</option>
+                        <option value="enc">Encouragements</option>
+                        <option value="mgt">Mise en garde travail</option>
+                        <option value="mgc">Mise en garde comportement</option>
+                    </select>
+                </div>
+                <div class="proposition">
+                    <div><label>Avis de mi-semestre sur les demande de l'élève : </label></div>
+                    <div>
+                        1STMG
+                        <input type="radio" id="favorable" name="proposition1" value="favorable">
+                        <label for="favorable">Favorable</label>
+                        <input type="radio" id="reserve" name="proposition1" value="reserve">
+                        <label for="reserve">Réservé</label>
+                        <input type="radio" id="defavorable" name="proposition1" value="defavorable">
+                        <label for="defavorable">Défavorable</label>
+                    </div>
+                    <div>
+                        1générale
+                        <input type="radio" id="favorable" name="proposition2" value="favorable">
+                        <label for="favorable">Favorable</label>
+                        <input type="radio" id="reserve" name="proposition2" value="reserve">
+                        <label for="reserve">Réservé</label>
+                        <input type="radio" id="defavorable" name="proposition2" value="defavorable">
+                        <label for="defavorable">Défavorable</label>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+
+</div>

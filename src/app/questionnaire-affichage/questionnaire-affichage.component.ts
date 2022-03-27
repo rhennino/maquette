@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VariablesCommunesService } from '../variables-communes.service';
 
 @Component({
   selector: 'app-questionnaire-affichage',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestionnaireAffichageComponent implements OnInit {
 
-  constructor() { }
+  constructor(public VC: VariablesCommunesService) { }
 
   ngOnInit(): void {
   }
