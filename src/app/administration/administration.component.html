@@ -1,5 +1,5 @@
 <div class="container">
-    <!-- header : a gauche nom prénom ou bouton connexion ; a droite bouton logout -->
+ 
     <div class="entete">
         <div [routerLink]="['/accueil']"><i class="fa fa-arrow-left"></i></div>
         <div *ngIf="!VC.connecte" (click)="VC.login()">Connexion</div>

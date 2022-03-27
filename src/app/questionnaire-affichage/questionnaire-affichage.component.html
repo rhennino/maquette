@@ -1,7 +1,8 @@
 <div class="container">
 
     <div class="entete">
-        <div *ngIf="!VC.connecte" (click)="VC.login()"><button>Connexion</button></div>
+        <div [routerLink]="['/accueil']"><i class="fa fa-arrow-left"></i></div>
+        <div *ngIf="!VC.connecte" (click)="VC.login()">Connexion</div>
         <div *ngIf="VC.connecte">Nom du professeur</div>
         <div *ngIf="VC.connecte" (click)="VC.logout()">logout<i class="fa fa-sign-out"></i></div>
     </div>
